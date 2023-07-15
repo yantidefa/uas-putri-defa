@@ -1,3 +1,37 @@
+<?php 
+   @session_start();
+   include "../config/config.php";
+  //  if ($_SESSION['email']) 
+  //  {
+  //    if ($_SESSION['role'] !="shop" || $_SESSION['role'] !="customer")  
+  //      {
+  //        header("location:index.php");
+  //      }
+  //    else{
+  //      if (@$_SESSION['role'] =="shop") 
+  //        { 
+  //          header("location:shop/index.php");
+  //      }
+  //    }
+  //  }
+  //  else{
+  //    header("location:../login/login.php");
+  //  }
+   
+   $email=$_SESSION['email'];
+   $QUERY="SELECT * FROM users WHERE email='$email'";
+   $result=mysqli_query($koneksi,$QUERY);
+
+    ?>
+    <?php
+    if (mysqli_num_rows($result)) {
+      $data_user=mysqli_fetch_array($result);
+      $_SESSION['id']=$data_user['id'];
+      $_SESSION['name']=$data_user['name'];
+      $_SESSION['image']=$data_user['image'];
+      $_SESSION['email']=$data_user['email'];
+   }
+   ?>
 <!doctype html>
 <html lang="en">
    <head>
@@ -10,11 +44,11 @@
    <body style="width: 1365px;
    min-height: 200px;">
       <!-- nav -->
-      <nav class="navbar navbar-expand-lg" style="background-color: #008000; width: 1366px;">
+      <nav class="navbar navbar-expand-lg" style="background-color: black; width: 1366px;">
         <div class="container">
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav" style="padding-left: 100%;">
-              <a class="text-light nav-link active" href="index.html">LOGOUT</a>
+              <a class="text-light nav-link active" href="../login/logout.php">LOGOUT</a>
             </div>
           </div>
         </div>
@@ -22,26 +56,35 @@
       <!-- nav -->
 
           <!-- sidebar -->
-          <div class="p-3" style="width: 250px; height: 540px; background-color: lightgray;">
+          <div class="p-3" style="width: 250px; height: 540px; background-color: #008000;">
             <ul class="nav nav-pills flex-column mb-auto">
-              <li class="nav-item">
-                  <a href="#" class="nav-link active" style="background-color: #008000;" aria-current="page">
-                  <i class="fa fa-store"></i>
+              <?php $page = $_GET['page']; ?>
+              <li>
+                  <a href="?page=category" class="nav-link" style="color: white; text-decoration:none;">
+                  <i class="fa fa-bag-shopping"></i>
                     <span style="padding-left: 20px;">
                       Home
                     </span>
                   </a>
               </li>
               <li>
-                  <a href="dashboard.html" class="nav-link link-body-emphasis">
+                  <a href="dashboard.html" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-chart-line"></i>
                     <span style="padding-left: 20px;">
                       Dashboard
                     </span>
                   </a>
               </li>
+              <li <?php if ($page == "category") { ?> class = "nav-link active" style="color: white; background-color: black;" <?php }  ?>>
+                  <a href="?page=category" class="nav-item" style="color: white; text-decoration:none;">
+                  <i class="fa fa-bag-shopping"></i>
+                    <span style="padding-left: 20px;">
+                      Category
+                    </span>
+                  </a>
+              </li>
               <li>
-                  <a href="order.html" class="nav-link link-body-emphasis">
+                  <a href="order.html" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-bag-shopping"></i>
                     <span style="padding-left: 20px;">
                       Orders
@@ -49,7 +92,7 @@
                   </a>
               </li>
               <li>
-                  <a href="#" class="nav-link link-body-emphasis">
+                  <a href="#" class="nav-link" style="color: white; text-decoration:none;">
                     <i class="fa fa-box"></i>
                       <span style="padding-left: 20px;">
                         Products
@@ -57,7 +100,7 @@
                   </a>
               </li>
               <li>
-                  <a href="#" class="nav-link link-body-emphasis">
+                  <a href="#" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-users"></i>
                     <span style="padding-left: 20px;">
                     Customers
@@ -70,7 +113,11 @@
 
         <!-- content -->
             <div class="container" style="padding-left: 15%; margin-top: -35%;">
-              <div class="row d-flex gap">
+            <?php  
+                     include "../config/menu.php";
+                     
+                     ?>
+              <!-- <div class="row d-flex gap">
                 <div class="col-md-3">
                   <div class="card" style="width: 14rem;">
                     <div class="card-body">
@@ -107,7 +154,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
         <!-- content -->
     

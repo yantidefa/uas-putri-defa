@@ -1,8 +1,8 @@
 <?php 
 @session_start();
 include('../config/config.php');
-$email     =   addslashes($_POST['email']);
-$password  =   addslashes($_POST['password']);
+$email      =   addslashes($_POST['email']);
+$password   =   addslashes($_POST['password']);
 $QUERY     =   mysqli_query($koneksi, "SELECT * FROM `users` WHERE `email` = '$email'");
 
 $HASIL     =   mysqli_num_rows($QUERY);
