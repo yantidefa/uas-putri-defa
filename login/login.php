@@ -1,3 +1,15 @@
+<?php 
+@session_start();
+include "../config/config.php";
+if (isset($_SESSION['email'])) 
+{
+	if($_SESSION['role'] =="customer") {header("location:../index.php");}
+	elseif ($_SESSION['role'] =="shop") {header("location:../admin/index.php");}
+	elseif ($_SESSION['role'] !="shop" || $_SESSION['role'] !="customer") {header("location:../admin/index.php");}
+}
+
+ ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,23 +23,23 @@
         <div class="card" style="border: 0; width: 26rem;">
             <img src="../images/logo.png" class="card-img-top" alt="...">
             <div class="card-body">
-            <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <button type="submit" class="btn" style="background-color: #008000; color: white;">Login</button>
+            <form method="POST" action="cek_login.php">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email">
                 </div>
-                <div class="col-md-4">
-                    <a href="../register/register.php">register here</a>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <button type="submit" class="btn" style="background-color: #008000; color: white;">Login</button>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="../register/register.php">register here</a>
+                    </div>
+                </div>
             </form>
             </div>
         </div>
