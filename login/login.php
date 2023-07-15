@@ -25,7 +25,7 @@
                     <button type="submit" class="btn" style="background-color: #008000; color: white;">Login</button>
                 </div>
                 <div class="col-md-4">
-                    <a href="#">register here</a>
+                    <a href="../register/register.php">register here</a>
                 </div>
             </div>
             </form>
