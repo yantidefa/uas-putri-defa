@@ -21,20 +21,7 @@
     </style>
 </head>
   <body>
-    <!-- <nav class="navbar" style="background-color: green; padding-bottom: 0%; padding-left: 20px; padding-right: 60px;">
-      <div class="container-fluid">
-        <ul class="text-light" style="font-size: 12px;">
-          <li>080808080</li>
-          <li>080808080</li>
-          <li>080808080</li>
-        </ul>
-        <ul class="text-light" style="font-size: 12px;">
-            <li>080808080</li>
-            <li>080808080</li>
-            <li>080808080</li>
-        </ul>
-      </div>
-    </nav> -->
+
     <!--------------------->
     <nav class="navbar navbar-expand-lg" style="background-color: #008000;">
       <div class="container">
@@ -101,135 +88,14 @@
       </div>
     </div>
     <!-- category -->
-    <!-- <div class="container pt-4" style="padding-left: 17%;">
-      <div class="row d-flex gap">
-        <div class="col-md-4">
-          <img src="" alt="">
-        </div>
-      </div>
-    </div> -->
+
   <!--------------------->
   <div class="container text-center" style="padding-top: 8%; padding-bottom: 8%;">
   <h3>Recomendation</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo qui nisi quo voluptatum vero recusandae praesentium non harum similique nesciunt nam saepe illum provident optio perferendis facere, iure quibusdam eos.</p>
   </div>
   <!------------------------------>
-  <div class="container">
-    <div class="row d-flex gap-0">
-      <div class="col-md-3 pb-4">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-    </div>
-</div>
-   <!--------------------->
-   <div class="container text-center" style="padding-top: 8%; padding-bottom: 8%;">
-    <h3>Article Terbaru</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo qui nisi quo voluptatum vero recusandae praesentium non harum similique nesciunt nam saepe illum provident optio perferendis facere, iure quibusdam eos.</p>
-    </div>
-    <!------------------------------>
-    <div class="container">
-      <div class="row d-flex gap-4 pb-4">
-        <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
-        <div class="col-md-8">
-          <p>2 Desember 2023</p>
-          <p class="fw-bold h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde odio quis vero consequuntur corrupti quas, tempore, magnam voluptate neque hic explicabo, a cumque obcaecati maxime nesciunt libero animi natus?</p>
-        </div>
-      </div>
-      <div class="row d-flex gap-4 pb-4">
-        <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
-        <div class="col-md-8">
-          <p>2 Desember 2023</p>
-          <p class="fw-bold h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde odio quis vero consequuntur corrupti quas, tempore, magnam voluptate neque hic explicabo, a cumque obcaecati maxime nesciunt libero animi natus?</p>
-        </div>
-      </div>
-      <div class="row d-flex gap-4 pb-4">
-        <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
-        <div class="col-md-8">
-          <p>2 Desember 2023</p>
-          <p class="fw-bold h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde odio quis vero consequuntur corrupti quas, tempore, magnam voluptate neque hic explicabo, a cumque obcaecati maxime nesciunt libero animi natus?</p>
-        </div>
-      </div>
-    </div>
+  <?php  include ("post.php"); ?>
     <footer>
       <div class="text-light" style="height: 350px; background-color: #008000;">
        <div class="container">

@@ -112,6 +112,15 @@
                     <hr>
                   </a>
               </li>
+              <li <?php if ($page == "article") ?>>
+                  <a href="?page=article&aksi" class="nav-link" style="color: white; text-decoration:none;">
+                  <i class="fa fa-bag-shopping"></i>
+                    <span style="padding-left: 20px;">
+                      Article
+                    </span>
+                    <hr>
+                  </a>
+              </li>
               <li <?php if ($page == "company") ?>>
                   <a href="?page=company" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-bag-shopping"></i>

@@ -22,6 +22,10 @@ switch ($page) {
 		include "../pages/product/product.php";
 		break;
 
+	case 'article':
+		include "../pages/article/article.php";
+		break;
+
 
 	default:
 		include "../pages/dashboard.php";

@@ -20,37 +20,34 @@
     </style>
 </head>
   <body>
-    <!-- <nav class="navbar" style="background-color: green; padding-bottom: 0%; padding-left: 20px; padding-right: 60px;">
-      <div class="container-fluid">
-        <ul class="text-light" style="font-size: 12px;">
-          <li>080808080</li>
-          <li>080808080</li>
-          <li>080808080</li>
-        </ul>
-        <ul class="text-light" style="font-size: 12px;">
-            <li>080808080</li>
-            <li>080808080</li>
-            <li>080808080</li>
-        </ul>
-      </div>
-    </nav> -->
-    <!--------------------->
-    <nav class="navbar navbar-expand-lg" style="background-color: green; padding-top: 10px; padding-bottom: 15px;">
-      <div class="container">
-        <a class="navbar-brand" href="#"><img src="" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav" style="padding-left: 800px;">
-            <a class="text-light nav-link active" href="index.php">Home</a>
-            <a class="text-light nav-link" href="product.php">Pangan</a>
-            <a class="text-light nav-link" href="artikel.php">Artikel</a>
-            <a class="text-light nav-link" href="about.php">About</a>
-          </div>
+  <nav class="navbar navbar-expand-lg" style="background-color: #008000;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" style="width: 100px;" alt="logo"></a>
+            </div>
         </div>
-      </div>
-    </nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-md-5">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="padding-left: 150px;">
+                <a class="text-light nav-link active" href="index.php">Home</a>
+                <a class="text-light nav-link" href="product.php">Pangan</a>
+                <a class="text-light nav-link" href="artikel.php">Artikel</a>
+                <a class="text-light nav-link" href="about.php">About</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="padding-left: 100px;">
+        <a href="login/login.php" class="btn text-light">Login</a>
+        <a href="register/register.php" type="submit" class="btn" style="background-color: white; color: #008000;">
+            Register
+        </a>
+        </div>
+    </div>
+</nav>
     <!--------------------->
 
    <!--------------------->

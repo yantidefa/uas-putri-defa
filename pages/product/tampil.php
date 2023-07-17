@@ -3,7 +3,7 @@
     ?>
 <div class="card">
     <div class="card-body">
-    <h3>Data Users</h3>
+    <h3>Data Product</h3>
     <hr>
     <br>
     <form>
@@ -17,7 +17,7 @@
                 <button type="submit" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-magnifying-glass"></i></button>
             </div>
         </div>
-        <a href="index.php?page=category&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a>
+        <a href="index.php?page=product&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a>
     </form>
     <br>
     <table class="table">
@@ -34,7 +34,7 @@
         <tbody>
             <tr>
             <?php 
-                $TAMPIL = "SELECT * FROM products";
+                $TAMPIL = "SELECT id, name, category_id, price, description, created_by_name, created_by_role, CASE WHEN created_by_role = '' THEN 'Admin' WHEN created_by_role != '' THEN created_by_role END AS created_by_role FROM products";
                 $HASIL = mysqli_query($koneksi,$TAMPIL);
                 $NO = 1;
                     while ($row=mysqli_fetch_array($HASIL)) {
@@ -50,11 +50,10 @@
               <td><?php echo $category_id; ?></td>
               <td><?php echo $name; ?></td>
               <td><?php echo $price; ?></td>
-              <td><?php echo $nameby; ?></td>
-              <td><?php echo $role; ?></td>
+              <td><?php echo "$nameby - $role"; ?></td>
               <td>
-                  <a href="index.php?page=category&aksi=edit&id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
-                  <a href="../pages/user/hapus.php?id=<?php echo $row['id'];?>" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-trash"></i></a>
+                  <a href="index.php?page=product&aksi=edit&id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
+                  <a href="../pages/product/hapus.php?id=<?php echo $row['id'];?>" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-trash"></i></a>
               </td>
             </tr>
             <?php 

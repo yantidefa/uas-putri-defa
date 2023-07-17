@@ -22,22 +22,34 @@
 </head>
   <body>
 <!-- nav -->
-    <nav class="navbar navbar-expand-lg" style="background-color: green; padding-top: 10px; padding-bottom: 15px;">
-      <div class="container">
-        <a class="navbar-brand" href="#"><img src="" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav" style="padding-left: 800px;">
-            <a class="text-light nav-link active" href="index.php">Home</a>
-            <a class="text-light nav-link" href="product.php">Pangan</a>
-            <a class="text-light nav-link" href="artikel.php">Artikel</a>
-            <a class="text-light nav-link" href="about.php">About</a>
-          </div>
+<nav class="navbar navbar-expand-lg" style="background-color: #008000;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" style="width: 100px;" alt="logo"></a>
+            </div>
         </div>
-      </div>
-    </nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-md-5">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="padding-left: 150px;">
+                <a class="text-light nav-link active" href="index.php">Home</a>
+                <a class="text-light nav-link" href="product.php">Pangan</a>
+                <a class="text-light nav-link" href="artikel.php">Artikel</a>
+                <a class="text-light nav-link" href="about.php">About</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="padding-left: 100px;">
+        <a href="login/login.php" class="btn text-light">Login</a>
+        <a href="register/register.php" type="submit" class="btn" style="background-color: white; color: #008000;">
+            Register
+        </a>
+        </div>
+    </div>
+</nav>
    <!-- nav -->
 
    
@@ -58,88 +70,81 @@
     <!------------------------------>
     <div class="container">
     <div class="row d-flex gap-0">
-      <div class="col-md-3 pb-4">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
+      <?php 
+include ("config/config.php");
+   $batas = 12;
+   $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+   $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;  
+   
+   $previous = $halaman - 1;
+   $next = $halaman + 1;
+   
+   $data = mysqli_query($koneksi,"SELECT * FROM products");
+   $jumlah_data = mysqli_num_rows($data);
+   $total_halaman = ceil($jumlah_data / $batas);
+   
+   $product = mysqli_query($koneksi,"SELECT * FROM products LIMIT $halaman_awal, $batas");
+   $nomor = $halaman_awal+1;  
+   while($d = mysqli_fetch_array($product)){
+      $ID = $d['id'];
+      $desc    =substr($d['description'], 0, 86);
+     ?>
       <div class="col-md-3">
         <a href="" style="text-decoration: none; color: white;">
           <div class="card product rounded-0" style="width: 16rem; border: 0;">
               <img src="images/products/product-01.png" alt="product">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text"><?php echo $desc; ?></p>
               </div>
           </div>
       </a>
       </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
-      <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
-          <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </a>
-      </div>
+      <?php
+   }
+   ?>
+   <nav>
+   <ul class="pagination justify-content-center">
+      <li class="page-item">
+         <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>>Previous</a>
+      </li>
+      <?php 
+         for($x=1;$x<=$total_halaman;$x++){
+           ?> 
+      <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+      <?php
+         }
+         ?>        
+      <li class="page-item">
+         <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Next</a>
+      </li>
+   </ul>
+</nav>
     </div>
     </div>
+    <footer>
+      <div class="text-light" style="height: 350px; background-color: #008000;">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-4" style="padding-top: 40px;">
+             <img src="images/logo.png" width="50%" alt="" style="padding-bottom: 20px;">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum corporis voluptate beatae totam quidem. Beatae voluptate, nostrum quos ullam error temporibus perspiciatis in molestiae optio perferendis nulla, iusto obcaecati?</p>
+           </div>
+           <div class="col-md-4 text-light" style="padding-top: 40px; padding-left: 15%;">
+              <h3>Menu</h3><br>
+                <a href="" style="text-decoration: none;" class="text-light">Home</a><br>
+                <a href="" style="text-decoration: none;" class="text-light">Pangan</a><br>
+                <a href="" style="text-decoration: none;" class="text-light">Article</a><br>
+                <a href="" style="text-decoration: none;" class="text-light">About</a>
+           </div>
+           <div class="col-md-4 text-light" style="padding-top: 40px; padding-left: 15%;">
+              <h3>Contact</h3><br>
+              <p>email@gmail.com</p>
+              <p>080000000000</p>
+           </div>
+         </div>
+       </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
