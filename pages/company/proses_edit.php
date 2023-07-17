@@ -1,6 +1,7 @@
 <?php 
 ob_start();
 include ("../../config/config.php");
+$id  = $_POST['id'];  
 $name  = $_POST['name'];  
 $image  = $_POST['image'];  
 $description  = $_POST['description'];  
@@ -11,7 +12,12 @@ if ($name 	== "" || $image  == "" || $address == "" || $description == "")
 	echo "Harap Isi Data Dengan Lengkap";
 }
 else {
-	$QUERY = mysqli_query($koneksi, "INSERT INTO `company` SET name =  '$name', image = '$image', description = '$description', address = '$address';") or die(mysqli_error($name, $image, $address, $description));
+	$query = mysqli_query ($koneksi,"UPDATE company SET     	
+	name = '$name' ,     	
+	address = '$address' ,     	
+	description = '$description' ,     	
+	image = '$image' WHERE id='$id';")
+ or die(mysqli_error($koneksi));
     header('location:../../admin/index.php?page=company');
 ?>
 <div class="alert alert-primary alert-dismissible fade show" role="alert">

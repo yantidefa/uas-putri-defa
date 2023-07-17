@@ -17,7 +17,7 @@ $query = mysqli_query ($koneksi,"UPDATE categories SET
 	image = '$image' WHERE id='$id';")
  or die(mysqli_error($koneksi));
 
- header('location:../../admin/index.php?page=category');
+ header('location:../../admin/index.php?page=category&aksi');
 
 ?>		
 

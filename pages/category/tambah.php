@@ -6,7 +6,7 @@
       <h3>Add Data Categories</h3>
       <hr>
       <br>
-      <form method="POST" action="../pages/category/proses_tambah.php">
+      <form method="POST" action="../pages/category/proses_tambah.php" enctype="multipart/form-data">
         <div class="mb-3">
           <label class="form-label">Name</label>
           <input type="text" class="form-control" name="name">
@@ -17,7 +17,7 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Image</label>
-          <input type="file" class="form-control" name="image">
+          <input type="file" class="form-control" name="file">
         </div>
         <button type="submit" class="btn" style="background-color: #008000; color: white;">Save</button>
         <button type="reset" class="btn btn-dark">Cancel</button>

@@ -1,13 +1,6 @@
 <?php 
-$page	=	$_GET['aksi'];
+$page = isset($_GET['aksi']);
 switch ($page) {
-
-    // case 'tambah':
- 		// 	include "tambah.php";
- 		// 	break;
- 		// case 'proses_tambah':
- 		//     include "proses_tambah.php";
- 		//     break;
 	
     case 'edit':
         include "edit.php";

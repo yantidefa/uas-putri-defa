@@ -19,6 +19,7 @@ $image    = $row['image'];
         <div class="mb-3">
           <label class="form-label">Name</label>
           <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
+          <input type="text" class="form-control" name="id" value="<?php echo $id; ?>">
         </div>
         <div class="mb-3">
           <label class="form-label">Description</label>

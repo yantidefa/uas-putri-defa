@@ -3,7 +3,7 @@
     ?>
 <div class="card">
     <div class="card-body">
-    <h3>Data Category</h3>
+    <h3>Data Users</h3>
     <hr>
     <br>
     <form>
@@ -25,23 +25,28 @@
             <tr>
             <th scope="col">#</th>
             <th scope="col">NAME</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">ROLE</th>
             <th scope="col">ACTION</th>
             </tr>
         </thead>
         <tbody>
             <tr>
             <?php 
-                $TAMPIL = "SELECT * FROM categories";
+                $TAMPIL = "SELECT id, name, email, CASE WHEN role = '' THEN 'Admin' WHEN role != '' THEN role END AS role FROM users";
                 $HASIL = mysqli_query($koneksi,$TAMPIL);
                 $NO = 1;
                     while ($row=mysqli_fetch_array($HASIL)) {
                 $NO;
                 $id     = $row['id'];
                 $name     = $row['name'];
-                $image    = $row['image'];                               
+                $email    = $row['email'];                               
+                $role    = $row['role'];                               
              ?>
               <th scope="row"><?php echo $NO; ?></th>
               <td><?php echo $name; ?></td>
+              <td><?php echo $email; ?></td>
+              <td><?php echo $role; ?></td>
               <td>
                   <a href="index.php?page=category&aksi=edit&id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
                   <a href="../pages/category/hapus.php?id=<?php echo $row['id'];?>" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-trash"></i></a>

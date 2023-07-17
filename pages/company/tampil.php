@@ -1,58 +1,39 @@
 <?php 
-$page	=	$_GET['aksi'];
+$EDIT   ="SELECT * FROM company " or die("Gagal melakukan query !!!".mysqli_error($id));
+$HASILEDIT  =   mysqli_query($koneksi, $EDIT);
+while ($row =   mysqli_fetch_array($HASILEDIT)) {
+$id    = $row['id'];
+$name    = $row['name'];
+$description    = $row['description'];
+$address    = $row['address'];
+$image    = $row['image'];
+}
 ?>
 <div class="card">
     <div class="card-body">
-    <h3>Data company</h3>
-    <hr>
-    <br>
-    <form>
-        <div class="row">
-            <div class="col-md-9">
-                <div class="mb-3" style="width: 100%;">
-                <input type="email" class="form-control" placeholder="Search...">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <button type="submit" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-magnifying-glass"></i></button>
-            </div>
+      <h3>Update Data Company</h3>
+      <hr>
+      <br>
+      <form method="POST" action="../pages/company/proses_edit.php">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
+          <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
         </div>
-        <!-- <a href="index.php?page=company&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a> -->
-    </form>
-    <br>
-    <table class="table">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">NAME</th>
-            <th scope="col">IMAGE</th>
-            <th scope="col">ACTION</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <?php 
-                $TAMPIL = "SELECT * FROM company";
-                $HASIL = mysqli_query($koneksi,$TAMPIL);
-                $NO = 1;
-                    while ($row=mysqli_fetch_array($HASIL)) {
-                $NO;
-                $id     = $row['id'];
-                $name     = $row['name'];
-                $image    = $row['image'];                               
-             ?>
-              <th scope="row"><?php echo $NO; ?></th>
-              <td><?php echo $name; ?></td>
-              <td><?php echo $image; ?></td>
-              <td>
-                  <a href="index.php?page=company&aksi=edit?id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
-              </td>
-            </tr>
-            <?php 
-                  $NO++;
-                  }
-                   ?>
-        </tbody>
-        </table>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-control" name="description" value="<?php echo $description; ?>">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <input type="text" class="form-control" name="address" value="<?php echo $address; ?>">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Image</label>
+          <input type="file" class="form-control" name="image" value="<?php echo $image; ?>">
+        </div>
+        <button type="submit" class="btn" style="background-color: #008000; color: white;">Save</button>
+        <button type="reset" class="btn btn-dark">Cancel</button>
+      </form>
     </div>
-</div>
+  </div>

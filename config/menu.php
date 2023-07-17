@@ -10,6 +10,10 @@ switch ($page) {
 		include "../pages/company/company.php";
 		break;
 
+	case 'user':
+		include "../pages/user/user.php";
+		break;
+
 
 	default:
 		include "../pages/dashboard.php";

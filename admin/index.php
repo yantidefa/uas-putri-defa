@@ -59,24 +59,24 @@
           <div class="p-3" style="width: 250px; height: 540px; background-color: #008000;">
             <ul class="nav nav-pills flex-column mb-auto">
               <?php $page = $_GET['page']; ?>
-              <li>
+              <!-- <li>
                   <a href="?page=category" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-bag-shopping"></i>
                     <span style="padding-left: 20px;">
                       Home
                     </span>
                   </a>
-              </li>
-              <li>
-                  <a href="dashboard.html" class="nav-link" style="color: white; text-decoration:none;">
+              </li> -->
+              <li <?php if ($page) ?>>
+                  <a href="?page" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-chart-line"></i>
                     <span style="padding-left: 20px;">
                       Dashboard
                     </span>
                   </a>
               </li>
-              <li <?php if ($page == "category") { ?> class = "nav-link active" style="color: white; background-color: black;" <?php }  ?>>
-                  <a href="?page=category" class="nav-item" style="color: white; text-decoration:none;">
+              <li <?php if ($page == "category") ?>>
+                  <a href="?page=category&aksi" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-bag-shopping"></i>
                     <span style="padding-left: 20px;">
                       Category
@@ -99,16 +99,16 @@
                       </span>
                   </a>
               </li>
-              <li>
-                  <a href="#" class="nav-link" style="color: white; text-decoration:none;">
+              <li <?php if ($page == "user") ?>>
+                  <a href="?page=user&aksi" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-users"></i>
                     <span style="padding-left: 20px;">
-                    Customers
+                    Users
                     </span>
                   </a>
               </li>
-              <li <?php if ($page == "company") { ?> class = "active"<?php }  ?>>
-                  <a href="?page=company" class="nav-item" style="color: white; text-decoration:none;">
+              <li <?php if ($page == "company") ?>>
+                  <a href="?page=company" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-bag-shopping"></i>
                     <span style="padding-left: 20px;">
                       Company

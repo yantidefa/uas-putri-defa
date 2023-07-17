@@ -17,16 +17,11 @@ $EDIT = "SELECT * FROM categories WHERE id='$id'" or die("Gagal melakukan query 
     <h3>Update Data Categories</h3>
     <hr>
     <br>
-    <?php 
-    if ($_POST['edit']) {
-        include"proses_edit.php";
-        }
-    ?>
-    <form method="POST" action="../pages/category/proses_edit.php">
+    <form method="POST" action="../pages/category/proses_edit.php" enctype="multipart/form-data">
         <div class="mb-3">
         <label class="form-label">Name</label>
         <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
-        <input type="text" class="form-control" name="name" value="<?php echo $id; ?>">
+        <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
         </div>
         <div class="mb-3">
         <label class="form-label">Description</label>

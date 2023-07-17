@@ -19,11 +19,11 @@ if ($HASIL==1) {
 	}
 
 	elseif ($DATA['role']=="shop") {
-		header("location:../admin/index.php");
+		header("location:../admin/index.php?page");
     }
 
     elseif ($DATA['role']!="shop" || $DATA['role']!="customer") {
-		header("location:../admin/index.php");
+		header("location:../admin/index.php?page");
     }
     
 	echo("
