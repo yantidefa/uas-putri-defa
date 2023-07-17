@@ -1,5 +1,5 @@
 <?php 
- $page	=	isset($_GET['aksi']);
+$page = isset($_GET['aksi']);
  switch ($page) {
  		case 'tambah':
  			include "tambah.php";

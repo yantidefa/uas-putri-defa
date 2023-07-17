@@ -1,9 +1,9 @@
 <?php 
-   $page = isset($_GET['aksi']);
-    ?>
+$page	=	$_GET['aksi'];
+?>
 <div class="card">
     <div class="card-body">
-    <h3>Data Category</h3>
+    <h3>Data company</h3>
     <hr>
     <br>
     <form>
@@ -17,7 +17,7 @@
                 <button type="submit" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-magnifying-glass"></i></button>
             </div>
         </div>
-        <a href="index.php?page=category&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a>
+        <!-- <a href="index.php?page=company&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a> -->
     </form>
     <br>
     <table class="table">
@@ -32,7 +32,7 @@
         <tbody>
             <tr>
             <?php 
-                $TAMPIL = "SELECT * FROM categories";
+                $TAMPIL = "SELECT * FROM company";
                 $HASIL = mysqli_query($koneksi,$TAMPIL);
                 $NO = 1;
                     while ($row=mysqli_fetch_array($HASIL)) {
@@ -45,8 +45,7 @@
               <td><?php echo $name; ?></td>
               <td><?php echo $image; ?></td>
               <td>
-                  <a href="index.php?page=category&aksi=edit?id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
-                  <a href="../pages/category/hapus.php?id=<?php echo $row['id'];?>" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-trash"></i></a>
+                  <a href="index.php?page=company&aksi=edit?id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
               </td>
             </tr>
             <?php 

@@ -107,6 +107,14 @@
                     </span>
                   </a>
               </li>
+              <li <?php if ($page == "company") { ?> class = "active"<?php }  ?>>
+                  <a href="?page=company" class="nav-item" style="color: white; text-decoration:none;">
+                  <i class="fa fa-bag-shopping"></i>
+                    <span style="padding-left: 20px;">
+                      Company
+                    </span>
+                  </a>
+              </li>
             </ul>
           </div>
         <!-- sidebar -->
