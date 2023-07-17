@@ -11,24 +11,35 @@ $target = '../../images/category/';
 $name  = $_POST['name'];  
 $description  = $_POST['description'];  
 
-if ($name 	== "" || $newFileName  == "") 
+if ($name 	== "" || $image  == "" || $description == "") 
 {
-	echo "Harap Isi Data Dengan Lengkap";
+	?>
+<div class="col-sm-12">
+	<div class="alert alert-block alert-danger">
+		<button type="button" class="close" data-dismiss="alert">
+			<i class="icon-remove"></i>
+		</button>
+
+		<i class="icon-warning-sign red"></i>
+		Pastikan Semua Form Terisi !!!	
+	</div>
+</div>
+<?php
+header('location:../../admin/index.php?page=category&aksi=tambah');
 }
 else {
 
     $gambar = move_uploaded_file($fileTmpName, $target.$newFileName);
 	if ($gambar) {
         $QUERY = mysqli_query($koneksi, "INSERT INTO `categories` SET name =  '$name', image = '$newFileName', description = '$description';") or die(mysqli_error($name, $image));
-        header('location:../../admin/index.php?page=category&aksi');
     }
-?>
-<div class="alert alert-primary alert-dismissible fade show" role="alert">
-    Selamat Data Berhasil Disimpan
-  	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-   </button>
+    ?>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Suksess!</strong> Data Berhasil Ditambahkan.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
+<meta http-equiv="refresh" content="1; url=../../admin/index.php?page=category&aksi=tampil">
 <?php 
+// header('location:../../admin/index.php?page=category&aksi');
 }
  ?>

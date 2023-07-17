@@ -43,25 +43,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav" style="padding-left: 800px;">
-            <a class="text-light nav-link active" href="index.html">Home</a>
-            <a class="text-light nav-link" href="#">Pangan</a>
-            <a class="text-light nav-link" href="artikel.html">Artikel</a>
-            <a class="text-light nav-link" href="#">Pricing</a>
+            <a class="text-light nav-link active" href="index.php">Home</a>
+            <a class="text-light nav-link" href="product.php">Pangan</a>
+            <a class="text-light nav-link" href="artikel.php">Artikel</a>
+            <a class="text-light nav-link" href="about.php">About</a>
           </div>
         </div>
       </div>
     </nav>
     <!--------------------->
-    <!-- <div class="text-bg-dark">
-        <img src="images/banner-02.png" class="card-img" alt="...">
-        <div class="card-img-overlay" style="padding-left: 60%; padding-top: 15%;">
-          <h3 class="card-title text-dark fw-bold">Card title</h3>
-          <p class="card-text text-dark">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div> -->
+
    <!--------------------->
    <div class="container text-center" style="padding-top: 8%; padding-bottom: 8%;">
-    <h3>Lorem ipsum dolor sit</h3>
+    <h3>Article Terbaru</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo qui nisi quo voluptatum vero recusandae praesentium non harum similique nesciunt nam saepe illum provident optio perferendis facere, iure quibusdam eos.</p>
     </div>
     <!------------------------------>
