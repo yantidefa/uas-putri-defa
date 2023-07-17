@@ -14,6 +14,14 @@ switch ($page) {
 		include "../pages/user/user.php";
 		break;
 
+	case 'order':
+		include "../pages/order/order.php";
+		break;
+
+	case 'product':
+		include "../pages/product/product.php";
+		break;
+
 
 	default:
 		include "../pages/dashboard.php";

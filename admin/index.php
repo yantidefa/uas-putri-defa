@@ -73,6 +73,7 @@
                     <span style="padding-left: 20px;">
                       Dashboard
                     </span>
+                    <hr>
                   </a>
               </li>
               <li <?php if ($page == "category") ?>>
@@ -81,22 +82,25 @@
                     <span style="padding-left: 20px;">
                       Category
                     </span>
+                    <hr>
                   </a>
               </li>
-              <li>
-                  <a href="order.html" class="nav-link" style="color: white; text-decoration:none;">
+              <li <?php if ($page == "order") ?>>
+                  <a href="?page=order&aksi" class="nav-link" style="color: white; text-decoration:none;">
                   <i class="fa fa-bag-shopping"></i>
                     <span style="padding-left: 20px;">
                       Orders
                     </span>
+                    <hr>
                   </a>
               </li>
-              <li>
-                  <a href="#" class="nav-link" style="color: white; text-decoration:none;">
+              <li <?php if ($page == "product") ?>>
+                  <a href="?page=product&aksi" class="nav-link" style="color: white; text-decoration:none;">
                     <i class="fa fa-box"></i>
                       <span style="padding-left: 20px;">
                         Products
                       </span>
+                      <hr>
                   </a>
               </li>
               <li <?php if ($page == "user") ?>>
@@ -105,6 +109,7 @@
                     <span style="padding-left: 20px;">
                     Users
                     </span>
+                    <hr>
                   </a>
               </li>
               <li <?php if ($page == "company") ?>>

@@ -24,28 +24,33 @@
         <thead>
             <tr>
             <th scope="col">#</th>
+            <th scope="col">CATEGORY</th>
             <th scope="col">NAME</th>
-            <th scope="col">EMAIL</th>
-            <th scope="col">ROLE</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">USER</th>
             <th scope="col">ACTION</th>
             </tr>
         </thead>
         <tbody>
             <tr>
             <?php 
-                $TAMPIL = "SELECT id, name, email, CASE WHEN role = '' THEN 'Admin' WHEN role != '' THEN role END AS role FROM users";
+                $TAMPIL = "SELECT * FROM products";
                 $HASIL = mysqli_query($koneksi,$TAMPIL);
                 $NO = 1;
                     while ($row=mysqli_fetch_array($HASIL)) {
                 $NO;
                 $id     = $row['id'];
+                $category_id     = $row['category_id'];
                 $name     = $row['name'];
-                $email    = $row['email'];                               
-                $role    = $row['role'];                               
+                $price    = $row['price'];                               
+                $nameby    = $row['created_by_name'];                               
+                $role    = $row['created_by_role'];                            
              ?>
               <th scope="row"><?php echo $NO; ?></th>
+              <td><?php echo $category_id; ?></td>
               <td><?php echo $name; ?></td>
-              <td><?php echo $email; ?></td>
+              <td><?php echo $price; ?></td>
+              <td><?php echo $nameby; ?></td>
               <td><?php echo $role; ?></td>
               <td>
                   <a href="index.php?page=category&aksi=edit&id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
