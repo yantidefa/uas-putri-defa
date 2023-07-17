@@ -10,6 +10,14 @@
           <input type="text" class="form-control" name="name">
         </div>
         <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Contact</label>
+          <input type="number" class="form-control" name="contact">
+        </div>
+        <div class="mb-3">
           <label class="form-label">Description</label>
           <input type="text" class="form-control" name="description">
         </div>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bde6091853.js" crossorigin="anonymous"></script>
     <style>
         .product:hover {
             box-shadow: 2px 11px 16px rgba(0, 0, 0, 0.8);
@@ -20,8 +21,8 @@
     </style>
 </head>
   <body>
-    <!--------------------->
-    <nav class="navbar navbar-expand-lg" style="background-color: #008000;">
+<!-- nav -->
+<nav class="navbar navbar-expand-lg" style="background-color: #008000;">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -49,35 +50,18 @@
         </div>
     </div>
 </nav>
-    <!--------------------->
+   <!-- nav -->
 
-   <!--------------------->
-   <?php 
-   include ("config/config.php");
-   $company   ="SELECT * FROM company " or die("Gagal melakukan query !!!".mysqli_error($koneksi));
-   $HASIL  =   mysqli_query($koneksi, $company);
-   while ($row =   mysqli_fetch_array($HASIL)) {
-   $id    = $row['id'];
-   $name    = $row['name'];
-   $description    = $row['description'];
-   $address    = $row['address'];
-   $image    = $row['image'];
-   $email    = $row['email'];
-   $contact    = $row['contact'];
-     ?>
-   <div style="padding-bottom: 8%;">
-    <img src="images/banner-02.png" alt="">
+   
+   <div class="container" style="padding-top: 8%; padding-bottom: 8%;">
+    <p>2 Desember 2023</p>
+    <h3>Ini Adalah Judul Article</h3><br>
+    <img src="images/banner-02.png" width="100%" alt="">
+    <p style="text-align: right; font-style: italic;">ini caption gambar</p><br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, a harum vitae unde minus saepe. Animi eaque minus, deleniti quasi nobis provident optio ut. Ut dolorum doloribus temporibus facilis sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, architecto. Nisi rem quis minus eos iusto molestias praesentium odit iure aliquid ullam? Exercitationem accusantium ipsum, magni nisi maiores commodi fugiat?</p>
     </div>
     <!------------------------------>
-    <div class="container" style="padding-bottom: 8%;">
-      <h3><?php echo $name;?></h3>
-      <p><?php echo $description; ?></p>
-      <p><?php echo $address; ?></p>
-      <p> <?php echo $email; ?> - <?php echo $contact; ?> </p>
-    </div>
-    <?php
-   }
-   ?>
+
     <footer>
       <div class="text-light" style="height: 350px; background-color: #008000;">
        <div class="container">

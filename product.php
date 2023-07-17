@@ -90,7 +90,7 @@ include ("config/config.php");
       $desc    =substr($d['description'], 0, 86);
      ?>
       <div class="col-md-3">
-        <a href="" style="text-decoration: none; color: white;">
+        <a href="detail_product.php?id=<?php echo($ID) ?>" style="text-decoration: none; color: white;">
           <div class="card product rounded-0" style="width: 16rem; border: 0;">
               <img src="images/products/product-01.png" alt="product">
               <div class="card-body">

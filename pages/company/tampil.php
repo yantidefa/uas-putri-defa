@@ -7,6 +7,8 @@ $name    = $row['name'];
 $description    = $row['description'];
 $address    = $row['address'];
 $image    = $row['image'];
+$email    = $row['email'];
+$contact    = $row['contact'];
 }
 ?>
 <div class="card">
@@ -19,6 +21,14 @@ $image    = $row['image'];
           <label class="form-label">Name</label>
           <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
           <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" value="<?php echo $email; ?>">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Contact</label>
+          <input type="number" class="form-control" name="contact" value="<?php echo $contact; ?>">
         </div>
         <div class="mb-3">
           <label class="form-label">Description</label>

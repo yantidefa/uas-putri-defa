@@ -6,6 +6,8 @@ $name  = $_POST['name'];
 $image  = $_POST['image'];  
 $description  = $_POST['description'];  
 $address  = $_POST['address'];  
+$email  = $_POST['email'];  
+$contact  = $_POST['contact'];  
 
 if ($name 	== "" || $image  == "" || $address == "" || $description == "") 
 {
@@ -15,6 +17,8 @@ else {
 	$query = mysqli_query ($koneksi,"UPDATE company SET     	
 	name = '$name' ,     	
 	address = '$address' ,     	
+	email = '$email' ,     	
+	contact = '$contact' ,     	
 	description = '$description' ,     	
 	image = '$image' WHERE id='$id';")
  or die(mysqli_error($koneksi));

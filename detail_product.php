@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bde6091853.js" crossorigin="anonymous"></script>
     <style>
         .product:hover {
             box-shadow: 2px 11px 16px rgba(0, 0, 0, 0.8);
@@ -20,8 +21,8 @@
     </style>
 </head>
   <body>
-    <!--------------------->
-    <nav class="navbar navbar-expand-lg" style="background-color: #008000;">
+<!-- nav -->
+<nav class="navbar navbar-expand-lg" style="background-color: #008000;">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -49,35 +50,39 @@
         </div>
     </div>
 </nav>
-    <!--------------------->
+   <!-- nav -->
 
-   <!--------------------->
    <?php 
-   include ("config/config.php");
-   $company   ="SELECT * FROM company " or die("Gagal melakukan query !!!".mysqli_error($koneksi));
-   $HASIL  =   mysqli_query($koneksi, $company);
-   while ($row =   mysqli_fetch_array($HASIL)) {
-   $id    = $row['id'];
-   $name    = $row['name'];
-   $description    = $row['description'];
-   $address    = $row['address'];
-   $image    = $row['image'];
-   $email    = $row['email'];
-   $contact    = $row['contact'];
-     ?>
-   <div style="padding-bottom: 8%;">
-    <img src="images/banner-02.png" alt="">
+$id=$_GET['id'];
+include ("config/config.php");
+$EDIT = "SELECT * FROM products WHERE id='$id'" or die("Gagal melakukan query !!!".mysqli_error($id));
+    $HASILEDIT = mysqli_query($koneksi,$EDIT);
+    while ($ROW=mysqli_fetch_array($HASILEDIT)) {
+        
+        $id           =$ROW['id'];
+        $name         =$ROW['name'];
+        $description  =$ROW['description'];
+        $image        =$ROW['image'];
+        $price        =$ROW['price'];
+}
+?>
+   <div class="container" style="padding-top: 8%; padding-bottom: 8%;">
+   <div class="row" style="padding-bottom: 40px;">
+    <div class="col-md-6">
+        <img src="images/products/product-01.png" alt="">
     </div>
+    <div class="col-md-6">
+        <h2 style="color: #008000;"><?php echo $name; ?></h2>
+        <hr>
+        <h5>Rp. <?php echo $price; ?>/Kg</h5><br>
+        <a href="" type="button" class="btn" style="background-color: #008000; color: white;">Pesan</a>
+    </div>
+   </div>
+    <h2 style="color: #008000;">Description</h2><br>
+    <p><?php echo $description; ?></p>
+   </div>
     <!------------------------------>
-    <div class="container" style="padding-bottom: 8%;">
-      <h3><?php echo $name;?></h3>
-      <p><?php echo $description; ?></p>
-      <p><?php echo $address; ?></p>
-      <p> <?php echo $email; ?> - <?php echo $contact; ?> </p>
-    </div>
-    <?php
-   }
-   ?>
+
     <footer>
       <div class="text-light" style="height: 350px; background-color: #008000;">
        <div class="container">
