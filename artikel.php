@@ -56,10 +56,9 @@
     <p>Jelajahi dunia kuliner dan pertanian terkini dengan artikel-artikel menarik kami. Temukan wawasan baru tentang ragam Pangan, tips bercocok tanam, resep lezat, dan berita terkini seputar produk segar dan sehat. Dapatkan informasi berharga untuk mengoptimalkan pengalaman berbelanja Anda di Delight. Mari kita bersama-sama mengeksplorasi dunia makanan dan pertanian melalui panduan-panduan bermanfaat yang kami sajikan. Selamat membaca dan selamat menikmati perjalanan kuliner dan pertanian yang penuh inspirasi!</p>
     </div>
     <!------------------------------>
-    <div class="container">
-      <div class="row d-flex gap-4" style="padding-bottom: 8%;">
+    <div class="container" style="padding-bottom: 8%;">
     <?php 
-    include ("config/config.php");
+        include ("config/config.php");
         $batas = 10;
         $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
         $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;  
@@ -79,16 +78,18 @@
         $created_at    = $d['created_at'];
         $short_description    = $d['short_description'];
         ?>
+      <div class="row d-flex gap-4 pb-4">
         <img src="images/article/<?php echo $d ['image']; ?>" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
         <div class="col-md-8">
           <p><?php echo $created_at; ?></p>
-          <p class="fw-bold h5"><a style="text-decoration: none; color: black;" href="detail_article.php?id=<?php echo($ID) ?>/<?php echo $d['slug']; ?>"><?php echo $title; ?></p>
+          <p class="fw-bold h5"><a style="text-decoration: none; color: black;" href="detail_article.php?id=<?php echo($ID) ?>/<?php echo $d['slug']; ?>"><?php echo $title; ?></a></p>
           <p><?php echo $short_description; ?></p>
         </div>
+      </div>
         <?php
         }
         ?>
-          <nav>
+        <nav>
    <ul class="pagination justify-content-center">
       <li class="page-item">
          <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>>Previous</a>
@@ -105,7 +106,6 @@
       </li>
    </ul>
 </nav>
-      </div>
     </div>
     <footer>
       <div class="text-light" style="height: 350px; background-color: #008000;">

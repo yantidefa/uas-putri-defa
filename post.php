@@ -39,7 +39,7 @@ while($d = mysqli_fetch_array($data_product)){
         $short_description    = $d['short_description'];
         ?>
       <div class="row d-flex gap-4 pb-4">
-        <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
+        <img src="images/article/<?php echo $d ['image']; ?>" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
         <div class="col-md-8">
           <p><?php echo $created_at; ?></p>
           <p class="fw-bold h5"><?php echo $title; ?></p>

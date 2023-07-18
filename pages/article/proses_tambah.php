@@ -41,7 +41,7 @@ if ($slug==""||
 else {
     $gambar = move_uploaded_file($fileTmpName, $target.$newFileName);
 	if ($gambar) {
-		$query = mysqli_query($koneksi,"INSERT INTO `article` SET 
+		$query = mysqli_query($koneksi,"INSERT INTO article SET 
 			image = '$newFileName',
 			title='$title',
 			short_description='$short_description',
