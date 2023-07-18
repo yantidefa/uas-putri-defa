@@ -14,7 +14,7 @@ $title = $_POST['title'];
 $short_description = $_POST['short_description'];
 $description = $_POST['description'];
 $caption = $_POST['caption'];
-$created_by_updated = $_POST['updated_by_name'];
+$updated_by_name = $_POST['updated_by_name'];
 $slug = slug($title);
 
 if ($title 	== "") 
@@ -31,7 +31,7 @@ else {
 			description='$description',
 			caption='$caption',
 			slug='$slug ',
-			created_by_updated='$created_by_updated' WHERE id='$id';")
+			updated_by_name='$updated_by_name' WHERE id='$id';")
 	 or die(mysqli_error($koneksi));
 	}
     header('location:../../admin/index.php?page=article&aksi');
