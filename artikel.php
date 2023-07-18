@@ -57,6 +57,7 @@
     </div>
     <!------------------------------>
     <div class="container">
+      <div class="row d-flex gap-4" style="padding-bottom: 8%;">
     <?php 
     include ("config/config.php");
         $batas = 10;
@@ -78,14 +79,12 @@
         $created_at    = $d['created_at'];
         $short_description    = $d['short_description'];
         ?>
-      <div class="row d-flex gap-4 pb-4">
-        <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
+        <img src="images/article/<?php echo $d ['image']; ?>" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
         <div class="col-md-8">
           <p><?php echo $created_at; ?></p>
-          <p class="fw-bold h5"><?php echo $title; ?></p>
+          <p class="fw-bold h5"><a style="text-decoration: none; color: black;" href="detail_article.php?id=<?php echo($ID) ?>/<?php echo $d['slug']; ?>"><?php echo $title; ?></p>
           <p><?php echo $short_description; ?></p>
         </div>
-      </div>
         <?php
         }
         ?>
@@ -106,6 +105,7 @@
       </li>
    </ul>
 </nav>
+      </div>
     </div>
     <footer>
       <div class="text-light" style="height: 350px; background-color: #008000;">

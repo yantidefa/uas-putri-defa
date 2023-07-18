@@ -47,7 +47,7 @@ else {
 			short_description='$short_description',
 			description='$description',
 			caption='$caption',
-			slug='$SLUG ',
+			slug='$slug ',
 			created_by_name='$created_by_name';") or die(mysqli_error($koneksi));
     }
     header('location:../../admin/index.php?page=article&aksi');

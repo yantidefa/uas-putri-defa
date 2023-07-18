@@ -69,7 +69,7 @@
     </div>
     <!------------------------------>
     <div class="container">
-    <div class="row d-flex gap-0">
+    <div class="row d-flex gap-0" style="padding-bottom: 8%;">
       <?php 
 include ("config/config.php");
    $batas = 12;

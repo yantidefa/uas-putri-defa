@@ -52,13 +52,29 @@
 </nav>
    <!-- nav -->
 
-   
+  <?php 
+include ("config/config.php");
+$id     = $_GET['id'];
+$EDIT   ="SELECT * FROM article WHERE id='$id'" or die("Gagal melakukan query !!!".mysqli_error($koneksi));
+$HASILEDIT  =   mysqli_query($koneksi, $EDIT);
+while ($row =   mysqli_fetch_array($HASILEDIT)) {
+    $jml_sekarang = $row['visit'];
+    $jml_baru = $jml_sekarang + 1;
+    $update_counts = mysqli_query($koneksi, "UPDATE article SET visit='$jml_baru' WHERE id='$id'");
+  }
+                        
+  $query = mysqli_query($koneksi,"SELECT * FROM article WHERE id = '$id'");
+  $data = mysqli_fetch_array($query)
+
+  ?>
    <div class="container" style="padding-top: 8%; padding-bottom: 8%;">
-    <p>2 Desember 2023</p>
-    <h3>Ini Adalah Judul Article</h3><br>
-    <img src="images/banner-02.png" width="100%" alt="">
-    <p style="text-align: right; font-style: italic;">ini caption gambar</p><br>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, a harum vitae unde minus saepe. Animi eaque minus, deleniti quasi nobis provident optio ut. Ut dolorum doloribus temporibus facilis sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, architecto. Nisi rem quis minus eos iusto molestias praesentium odit iure aliquid ullam? Exercitationem accusantium ipsum, magni nisi maiores commodi fugiat?</p>
+    <p><?php echo $data['created_at']; ?></p>
+    <h3><?php echo $data['title']; ?></h3><br>
+    <img src="images/article/<?php echo $data ['image']; ?>" width="100%" alt="">
+    <p style="text-align: right; font-style: italic;"><?php echo $data['caption']; ?></p><br>
+    <p><?php echo $data['description']; ?></p>
+    <br>
+    <p style="font-style: italic;">Author : <?php echo $data['created_by_name']; ?></p>
     </div>
     <!------------------------------>
 

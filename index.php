@@ -91,7 +91,7 @@
 
   <!--------------------->
   <div class="container text-center" style="padding-top: 8%; padding-bottom: 8%;">
-  <h3>Recomendation</h3>
+  <h3>Recomendasi</h3>
   <p>Selamat datang di Hijau Delight, destinasi lengkap untuk produk segar dan menggugah selera. Temukan beragam barang berkualitas tinggi kami, termasuk berbagai macam Pangan (makanan), Artikel informatif, dan banyak lagi. Jangan lewatkan Rekomendasi pilihan kami, yang dipilih secara khusus hanya untuk Anda. Baik itu Daging segar, Sayur yang renyah, Bibit yang kaya nutrisi, atau Buah yang manis, semuanya ada di sini. Nikmati pengalaman belanja tanpa repot dan tetap terinformasi dengan artikel-artikel menarik kami. Bergabunglah dengan kami hari ini dengan mendaftar dan mulailah perjalanan menyenangkan bersama kami.</p>
   </div>
   <!------------------------------>

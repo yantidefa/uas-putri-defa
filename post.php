@@ -28,7 +28,7 @@ while($d = mysqli_fetch_array($data_product)){
     <p>Jelajahi dunia kuliner dan pertanian terkini dengan artikel-artikel menarik kami. Temukan wawasan baru tentang ragam Pangan, tips bercocok tanam, resep lezat, dan berita terkini seputar produk segar dan sehat. Dapatkan informasi berharga untuk mengoptimalkan pengalaman berbelanja Anda di Delight. Mari kita bersama-sama mengeksplorasi dunia makanan dan pertanian melalui panduan-panduan bermanfaat yang kami sajikan. Selamat membaca dan selamat menikmati perjalanan kuliner dan pertanian yang penuh inspirasi!</p>
     </div>
     <!------------------------------>
-    <div class="container">
+    <div class="container" style="padding-bottom: 8%;">
         <?php 
         $batas = 4;
         $data_product = mysqli_query($koneksi,"SELECT * FROM article LIMIT 0, $batas");
