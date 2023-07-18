@@ -57,30 +57,55 @@
     </div>
     <!------------------------------>
     <div class="container">
+    <?php 
+    include ("config/config.php");
+        $batas = 10;
+        $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+        $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;  
+        
+        $previous = $halaman - 1;
+        $next = $halaman + 1;
+        
+        $data = mysqli_query($koneksi,"SELECT * FROM products");
+        $jumlah_data = mysqli_num_rows($data);
+        $total_halaman = ceil($jumlah_data / $batas);
+
+        $data_product = mysqli_query($koneksi,"SELECT * FROM article LIMIT 0, $batas");
+        $nomor = $halaman_awal+1;
+        while($d = mysqli_fetch_array($data_product)){
+        $ID = $d['id'];
+        $title    = $d['title'];
+        $created_at    = $d['created_at'];
+        $short_description    = $d['short_description'];
+        ?>
       <div class="row d-flex gap-4 pb-4">
         <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
         <div class="col-md-8">
-          <p>2 Desember 2023</p>
-          <p class="fw-bold h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde odio quis vero consequuntur corrupti quas, tempore, magnam voluptate neque hic explicabo, a cumque obcaecati maxime nesciunt libero animi natus?</p>
+          <p><?php echo $created_at; ?></p>
+          <p class="fw-bold h5"><?php echo $title; ?></p>
+          <p><?php echo $short_description; ?></p>
         </div>
       </div>
-      <div class="row d-flex gap-4 pb-4">
-        <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
-        <div class="col-md-8">
-          <p>2 Desember 2023</p>
-          <p class="fw-bold h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde odio quis vero consequuntur corrupti quas, tempore, magnam voluptate neque hic explicabo, a cumque obcaecati maxime nesciunt libero animi natus?</p>
-        </div>
-      </div>
-      <div class="row d-flex gap-4 pb-4">
-        <img src="images/products/product-01.png" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
-        <div class="col-md-8">
-          <p>2 Desember 2023</p>
-          <p class="fw-bold h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde odio quis vero consequuntur corrupti quas, tempore, magnam voluptate neque hic explicabo, a cumque obcaecati maxime nesciunt libero animi natus?</p>
-        </div>
-      </div>
+        <?php
+        }
+        ?>
+          <nav>
+   <ul class="pagination justify-content-center">
+      <li class="page-item">
+         <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>>Previous</a>
+      </li>
+      <?php 
+         for($x=1;$x<=$total_halaman;$x++){
+           ?> 
+      <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+      <?php
+         }
+         ?>        
+      <li class="page-item">
+         <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Next</a>
+      </li>
+   </ul>
+</nav>
     </div>
     <footer>
       <div class="text-light" style="height: 350px; background-color: #008000;">
