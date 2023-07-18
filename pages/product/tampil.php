@@ -6,19 +6,7 @@
     <h3>Data Product</h3>
     <hr>
     <br>
-    <form>
-        <div class="row">
-            <div class="col-md-9">
-                <div class="mb-3" style="width: 100%;">
-                <input type="email" class="form-control" placeholder="Search...">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <button type="submit" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-magnifying-glass"></i></button>
-            </div>
-        </div>
-        <a href="index.php?page=product&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a>
-    </form>
+    <a href="index.php?page=product&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a>
     <br>
     <table class="table">
         <thead>
