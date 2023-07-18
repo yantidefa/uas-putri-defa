@@ -127,7 +127,7 @@ include ("config/config.php");
          <div class="row">
            <div class="col-md-4" style="padding-top: 40px;">
              <img src="images/logo.png" width="50%" alt="" style="padding-bottom: 20px;">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum corporis voluptate beatae totam quidem. Beatae voluptate, nostrum quos ullam error temporibus perspiciatis in molestiae optio perferendis nulla, iusto obcaecati?</p>
+             <p>destinasi belanja daring yang menyediakan produk segar dan berkualitas tinggi untuk memenuhi kebutuhan kuliner dan pertanian Anda.</p>
            </div>
            <div class="col-md-4 text-light" style="padding-top: 40px; padding-left: 15%;">
               <h3>Menu</h3><br>

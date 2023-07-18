@@ -82,6 +82,30 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="text-light" style="height: 350px; background-color: #008000;">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-4" style="padding-top: 40px;">
+             <img src="images/logo.png" width="50%" alt="" style="padding-bottom: 20px;">
+             <p>destinasi belanja daring yang menyediakan produk segar dan berkualitas tinggi untuk memenuhi kebutuhan kuliner dan pertanian Anda.</p>
+           </div>
+           <div class="col-md-4 text-light" style="padding-top: 40px; padding-left: 15%;">
+              <h3>Menu</h3><br>
+                <a href="" style="text-decoration: none;" class="text-light">Home</a><br>
+                <a href="" style="text-decoration: none;" class="text-light">Pangan</a><br>
+                <a href="" style="text-decoration: none;" class="text-light">Article</a><br>
+                <a href="" style="text-decoration: none;" class="text-light">About</a>
+           </div>
+           <div class="col-md-4 text-light" style="padding-top: 40px; padding-left: 15%;">
+              <h3>Contact</h3><br>
+              <p>email@gmail.com</p>
+              <p>080000000000</p>
+           </div>
+         </div>
+       </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
