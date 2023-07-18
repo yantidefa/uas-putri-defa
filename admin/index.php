@@ -1,29 +1,11 @@
 <?php 
    @session_start();
    include "../config/config.php";
-  //  if ($_SESSION['email']) 
-  //  {
-  //    if ($_SESSION['role'] !="shop" || $_SESSION['role'] !="customer")  
-  //      {
-  //        header("location:index.php");
-  //      }
-  //    else{
-  //      if (@$_SESSION['role'] =="shop") 
-  //        { 
-  //          header("location:shop/index.php");
-  //      }
-  //    }
-  //  }
-  //  else{
-  //    header("location:../login/login.php");
-  //  }
    
    $email=$_SESSION['email'];
    $QUERY="SELECT * FROM users WHERE email='$email'";
    $result=mysqli_query($koneksi,$QUERY);
 
-    ?>
-    <?php
     if (mysqli_num_rows($result)) {
       $data_user=mysqli_fetch_array($result);
       $_SESSION['id']=$data_user['id'];

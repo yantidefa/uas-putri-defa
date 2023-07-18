@@ -42,10 +42,18 @@
             </div>
         </div>
         <div class="col-md-3" style="padding-left: 100px;">
-        <a href="login/login.php" class="btn text-light">Login</a>
-        <a href="register/register.php" type="submit" class="btn" style="background-color: white; color: #008000;">
-            Register
-        </a>
+        <?php
+        session_start();
+          if (isset($_SESSION['email'])) {
+            
+            echo ("<a href='login/logout.php' class='btn text-light'>Logout</a>");
+          } else {
+            echo ("<a href='login/login.php' class='btn text-light'>Login</a>
+            <a href='register/register.php' type='submit' class='btn' style='background-color: white; color: #008000;'>
+              Register
+            </a>");
+          }
+        ?>
         </div>
     </div>
 </nav>
