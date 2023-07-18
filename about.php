@@ -70,10 +70,10 @@
     </div>
     <!------------------------------>
     <div class="container" style="padding-bottom: 8%;">
-      <h3><?php echo $name;?></h3>
+      <h3 class="fw-bold"><?php echo $name;?></h3><br>
       <p><?php echo $description; ?></p>
-      <p><?php echo $address; ?></p>
-      <p> <?php echo $email; ?> - <?php echo $contact; ?> </p>
+      <p class="fw-bold"><?php echo $address; ?></p>
+      <p class="fw-bold"><?php echo $email; ?> - <?php echo $contact; ?> </p>
     </div>
     <?php
    }

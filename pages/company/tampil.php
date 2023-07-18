@@ -1,3 +1,29 @@
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+   tinymce.init({
+   selector: '#custom',
+   height: 400,
+   forced_root_block : "",
+   force_br_newlines : true,
+   force_p_newlines : false,
+   plugins: [
+     'autolink lists link image charmap print preview hr anchor pagebreak',
+     'searchreplace wordcount visualblocks visualchars code fullscreen',
+     'insertdatetime media nonbreaking save table contextmenu directionality',
+     'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
+   ],
+   toolbar1: 'undo redo | insert | styleselect table | bold italic | hr alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media ',
+   toolbar2: 'print preview | forecolor backcolor emoticons | fontselect | fontsizeselect | codesample code fullscreen',
+   templates: [
+     { title: 'Test template 1', content: '' },
+     { title: 'Test template 2', content: '' }
+   ],
+   content_css: [
+     '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+     '//www.tinymce.com/css/codepen.min.css'
+   ],
+   });
+</script>
 <?php 
 $EDIT   ="SELECT * FROM company " or die("Gagal melakukan query !!!".mysqli_error($id));
 $HASILEDIT  =   mysqli_query($koneksi, $EDIT);
@@ -32,7 +58,8 @@ $contact    = $row['contact'];
         </div>
         <div class="mb-3">
           <label class="form-label">Description</label>
-          <input type="text" class="form-control" name="description" value="<?php echo $description; ?>">
+          <textarea id="custom" name="description"><?php echo $description; ?></textarea>
+          <!-- <input type="text" class="form-control" name="description" value="<?php echo $description; ?>"> -->
         </div>
         <div class="mb-3">
           <label class="form-label">Address</label>

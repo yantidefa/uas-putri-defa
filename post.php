@@ -26,7 +26,7 @@
 
   <div class="container text-center" style="padding-top: 8%; padding-bottom: 8%;">
     <h3>Article Terbaru</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo qui nisi quo voluptatum vero recusandae praesentium non harum similique nesciunt nam saepe illum provident optio perferendis facere, iure quibusdam eos.</p>
+    <p>Jelajahi dunia kuliner dan pertanian terkini dengan artikel-artikel menarik kami. Temukan wawasan baru tentang ragam Pangan, tips bercocok tanam, resep lezat, dan berita terkini seputar produk segar dan sehat. Dapatkan informasi berharga untuk mengoptimalkan pengalaman berbelanja Anda di Delight. Mari kita bersama-sama mengeksplorasi dunia makanan dan pertanian melalui panduan-panduan bermanfaat yang kami sajikan. Selamat membaca dan selamat menikmati perjalanan kuliner dan pertanian yang penuh inspirasi!</p>
     </div>
     <!------------------------------>
     <div class="container">

@@ -15,7 +15,7 @@ $address  = $_POST['address'];
 $email  = $_POST['email'];  
 $contact  = $_POST['contact'];  
 
-if ($name 	== "" || $image  == "" || $address == "" || $description == "") 
+if ($name 	== "") 
 {
 	echo "Harap Isi Data Dengan Lengkap";
 }
