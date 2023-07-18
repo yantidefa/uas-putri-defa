@@ -29,7 +29,7 @@ if ($name 	== "" || $image  == "" || $description == "" || $category_id == "" ||
 	</div>
 </div>
 <?php
-// header('location:../../admin/index.php?page=product&aksi=tambah');
+
 }
 else {
 
