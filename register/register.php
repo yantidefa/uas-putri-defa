@@ -31,7 +31,6 @@
                         <label for="exampleInputEmail1" class="form-label">Role</label>
                         <select class="form-select" aria-label="Default select example" name="role">
                             <option value="customer">Customer</option>
-                            <option value="shop">Shop</option>
                         </select>
                     </div>
                 </div>
