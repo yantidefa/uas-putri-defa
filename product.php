@@ -61,19 +61,9 @@
    <!-- nav -->
 
    
-   <div class="container" style="padding-top: 8%; padding-bottom: 8%; padding-left: 12%">
-   <form>
-        <div class="row">
-            <div class="col-md-9">
-                <div class="mb-3" style="width: 100%;">
-                <input type="email" class="form-control" placeholder="Search...">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <button type="submit" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-magnifying-glass"></i></button>
-            </div>
-        </div>
-    </form>
+   <div class="container text-center" style="padding-top: 8%; padding-bottom: 8%;">
+   <h3>Recomendasi</h3>
+  <p>Selamat datang di Hijau Delight, destinasi lengkap untuk produk segar dan menggugah selera. Temukan beragam barang berkualitas tinggi kami, termasuk berbagai macam Pangan (makanan), Artikel informatif, dan banyak lagi. Jangan lewatkan Rekomendasi pilihan kami, yang dipilih secara khusus hanya untuk Anda. Baik itu Daging segar, Sayur yang renyah, Bibit yang kaya nutrisi, atau Buah yang manis, semuanya ada di sini. Nikmati pengalaman belanja tanpa repot dan tetap terinformasi dengan artikel-artikel menarik kami. Bergabunglah dengan kami hari ini dengan mendaftar dan mulailah perjalanan menyenangkan bersama kami.</p>
     </div>
     <!------------------------------>
     <div class="container">
