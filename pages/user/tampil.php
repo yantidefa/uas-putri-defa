@@ -17,7 +17,7 @@
                 <button type="submit" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-magnifying-glass"></i></button>
             </div>
         </div>
-        <a href="index.php?page=category&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a>
+        <a href="index.php?page=user&aksi=tambah" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-plus"></i> Add</a>
     </form>
     <br>
     <table class="table">
@@ -48,7 +48,7 @@
               <td><?php echo $email; ?></td>
               <td><?php echo $role; ?></td>
               <td>
-                  <a href="index.php?page=category&aksi=edit&id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
+                  <a href="index.php?page=user&aksi=edit&id=<?php echo $id; ?>" class="btn" style="background-color: #008000; color: white;"><i class="fa fa-pen-to-square"></i></a>
                   <a href="../pages/user/hapus.php?id=<?php echo $row['id'];?>" type="button" class="btn" style="background-color: black; color: white;"><i class="fa fa-trash"></i></a>
               </td>
             </tr>

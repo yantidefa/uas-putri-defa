@@ -16,7 +16,7 @@ $contact    = $row['contact'];
       <h3>Update Data Company</h3>
       <hr>
       <br>
-      <form method="POST" action="../pages/company/proses_edit.php">
+      <form method="POST" action="../pages/company/proses_edit.php" enctype="multipart/form-data">
         <div class="mb-3">
           <label class="form-label">Name</label>
           <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
@@ -40,7 +40,7 @@ $contact    = $row['contact'];
         </div>
         <div class="mb-3">
           <label class="form-label">Image</label>
-          <input type="file" class="form-control" name="image" value="<?php echo $image; ?>">
+          <input type="file" class="form-control" name="file" value="<?php echo $image; ?>">
         </div>
         <button type="submit" class="btn" style="background-color: #008000; color: white;">Save</button>
         <button type="reset" class="btn btn-dark">Cancel</button>
