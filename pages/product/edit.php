@@ -6,18 +6,18 @@
       <h3>Update Data Product</h3>
       <hr>
       <br>
-      <?php 
-$EDIT   ="SELECT * FROM products " or die("Gagal melakukan query !!!".mysqli_error($id));
-$HASILEDIT  =   mysqli_query($koneksi, $EDIT);
-while ($row =   mysqli_fetch_array($HASILEDIT)) {
-$id    = $row['id'];
-$name    = $row['name'];
-$description    = $row['description'];
-$image    = $row['image'];
-$price    = $row['price'];
-$category_id    = $row['category_id'];
-}
-?>
+        <?php 
+        $EDIT   ="SELECT * FROM products " or die("Gagal melakukan query !!!".mysqli_error($id));
+        $HASILEDIT  =   mysqli_query($koneksi, $EDIT);
+        while ($row =   mysqli_fetch_array($HASILEDIT)) {
+        $id    = $row['id'];
+        $name    = $row['name'];
+        $description    = $row['description'];
+        $image    = $row['image'];
+        $price    = $row['price'];
+        $category_id    = $row['category_id'];
+        }
+        ?>
       <form method="POST" action="../pages/product/proses_edit.php" enctype="multipart/form-data">
         <div class="mb-3">
           <label class="form-label">Name</label>

@@ -6,7 +6,7 @@ $image = $file['name'];
 $fileTmpName = $file['tmp_name'];
 $currentDateTime = date('Ymd_His');
 $newFileName = $currentDateTime . '_' . $image;
-$target = '../../images/products/';
+$target = '../../images/user/';
 
 $name  = $_POST['name'];  
 $gender  = $_POST['gender'];  
