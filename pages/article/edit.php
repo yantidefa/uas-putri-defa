@@ -26,7 +26,8 @@
 </script>
 <?php 
 $page = $_GET['aksi'];
-$EDIT   ="SELECT * FROM article " or die("Gagal melakukan query !!!".mysqli_error($id));
+$id=$_GET['id'];
+$EDIT   ="SELECT * FROM article WHERE id = '$id'" or die("Gagal melakukan query !!!".mysqli_error($id));
 $HASILEDIT  =   mysqli_query($koneksi, $EDIT);
 while ($row =   mysqli_fetch_array($HASILEDIT)) {
 $id    = $row['id'];
