@@ -8,7 +8,7 @@ while($d = mysqli_fetch_array($data_product)){
     $desc    =substr($d['description'], 0, 86);
     ?>
       <div class="col-md-3 pb-4">
-        <a href="" style="text-decoration: none; color: white;">
+        <a href="detail_product.php?id=<?php echo($ID) ?>" style="text-decoration: none; color: white;">
           <div class="card product rounded-0" style="width: 16rem; border: 0;">
               <img src="images/products/<?php echo $d ['image']; ?>" alt="product">
               <div class="card-body">
@@ -42,7 +42,7 @@ while($d = mysqli_fetch_array($data_product)){
         <img src="images/article/<?php echo $d ['image']; ?>" style="width: 300px; height: 150px; object-fit: cover;" alt="article">
         <div class="col-md-8">
           <p><?php echo $created_at; ?></p>
-          <p class="fw-bold h5"><?php echo $title; ?></p>
+          <p class="fw-bold h5"><a style="text-decoration: none; color: black;" href="detail_article.php?id=<?php echo($ID) ?>/<?php echo $d['slug']; ?>"><?php echo $title; ?></a></p>
           <p><?php echo $short_description; ?></p>
         </div>
       </div>
