@@ -10,7 +10,7 @@ while($d = mysqli_fetch_array($data_product)){
       <div class="col-md-3 pb-4">
         <a href="" style="text-decoration: none; color: white;">
           <div class="card product rounded-0" style="width: 16rem; border: 0;">
-              <img src="images/products/product-01.png" alt="product">
+              <img src="images/products/<?php echo $d ['image']; ?>" alt="product">
               <div class="card-body">
                 <p class="card-text"><?php echo $desc; ?></p>
               </div>
