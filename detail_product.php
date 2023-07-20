@@ -77,7 +77,7 @@ $EDIT = "SELECT * FROM products WHERE id='$id'" or die("Gagal melakukan query !!
    <div class="container" style="padding-top: 8%; padding-bottom: 8%;">
    <div class="row" style="padding-bottom: 40px;">
     <div class="col-md-6">
-        <img src="images/products/<?php echo $d ['image']; ?>" alt="">
+        <img src="images/products/<?php echo $row ['image']; ?>" alt="">
     </div>
     <div class="col-md-6">
         <h2 style="color: #008000;"><?php echo $name; ?></h2>
